@@ -96,11 +96,14 @@ section {
 		}
 	}
 	.one-third {
-		height: 160px;
+		height: 180px;
 		margin-bottom: 10px;
+		img {
+			width: 100%;
+		}
 	}
 	.two-third {
-		height: 330px;
+		height: 370px;
 		margin-bottom: 10px;
 	}
 
@@ -109,7 +112,7 @@ section {
 		text-align: center;
 		.img-blk {
 			width: 70%;
-			padding-top: 60px;
+			padding-top: 80px;
 			margin: auto;
 			display: inline-block;
 		}
