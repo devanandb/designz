@@ -1,7 +1,7 @@
 .bg-dark {
 	font-size: 100px;
 	/*background: rgba(9,0,0,.8);*/
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
 	h1 {
 		display: block;
@@ -50,34 +50,48 @@ section {
 		min-height: 200px;
 		text-align: center;
 		vertical-align: middle;
-		border:5px solid #ffffff;
-		border-bottom: 0px;
+		/*border:5px solid #ffffff;
+		border-bottom: 0px;*/
 		/*margin-bottom: 10px;*/
 		i {
-			font-size: 60px;
+			font-size: 80px;
 			color: #fff;
 			font-weight: 100;
-			margin-top: 70px;
+			margin-top: 55px;
 		}
 		
 	}
 	.fig-blk.one {
-		background-color: #fae596;
-
+		background-color: #88a65e;
+		i {
+			color: #4d4d4d;
+		}
 	}
 	.fig-blk.two {
-		background-color: #c7ad88;
+		background-color: #edc951;
+		i {
+			color: #1e80af;
+		}
 
 	}
 	.fig-blk.three {
-		background-color: #6ed3cf;
+		background-color: #6a4a3d;
+		i {
+			color: #f4941b;
+		}
+	}
+	.fig-blk.four {
+		background-color: #4d4d4d;
+		i {
+			color: #cd333f;
+		}
 	}
 	.txt-blk {
 		background-color: #fff;
 		padding:20px;
 		text-align: center;
 		h3 {
-
+			margin-bottom: 8px;
 		}
 	}
 	.each-featurette {
@@ -95,20 +109,48 @@ section {
 			background-color: #fff;
 		}
 	}
+	a {
+		display: block;
+	}
+	h2 {
+		margin-bottom: 0px !important;
+		color: #eeeeee;
+	}
+	p {
+		color: #dddddd;
+		font-size: 16px;
+		margin-bottom: 40px;
+	}
+	.uk-overlay-panel {
+		background:rgba(0,0,0,0.4);
+		/*top:90%;*/
+		/*bottom: 0px;
+		height: 30px;*/
+	}
+	figcaption {
+		text-transform: uppercase;
+		font-size: 20px;
+	}
 	.one-third {
 		height: 180px;
 		margin-bottom: 10px;
+		box-shadow: 0px 0px 2px #555;
 		img {
 			width: 100%;
 		}
+		figcaption { 
+			padding-top: 80px;
+		}
+
 	}
 	.two-third {
 		height: 370px;
 		margin-bottom: 10px;
+		box-shadow: 0px 0px 2px #555;
 	}
 
 	.flowers {
-		background-color: #f6b92b !important;
+		background-color: #e06f71 !important;
 		text-align: center;
 		.img-blk {
 			width: 70%;
@@ -116,6 +158,70 @@ section {
 			margin: auto;
 			display: inline-block;
 		}
-		
+		figcaption { 
+			padding-top: 170px;
+		}
+	}
+	.handicrafts {
+		background-color: #1b586b !important;
+		text-align: center;
+		.img-blk {
+			width: 100px;
+
+			padding-top: 30px;
+			margin: auto;
+			display: inline-block;
+			img {
+				height: 100%;
+			}
+		}
+	}
+	.cakes {
+		background-color: #fbb850 !important;
+		text-align: center;
+		.img-blk {
+			width: 100px;
+
+			padding-top: 30px;
+			margin: auto;
+			display: inline-block;
+			img {
+				height: 100%;
+			}
+		}
+	}
+	.shirts {
+		background-color: #fbb850 !important;
+		text-align: center;
+		.img-blk {
+			width: 100px;
+
+			padding-top: 30px;
+			margin: auto;
+			display: inline-block;
+			img {
+				height: 100%;
+			}
+		}
+	}
+	.tupperware {
+		background-color: #28aace !important;
+		text-align: center;
+		.img-blk {
+			width: 100px;
+
+			padding-top: 30px;
+			margin: auto;
+			display: inline-block;
+			img {
+				height: 100%;
+			}
+		}
+	}
+	.stationaries {
+		figcaption { 
+			text-align: center;
+			padding-top: 170px;
+		}
 	}
 }
