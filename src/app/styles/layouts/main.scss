@@ -16,7 +16,7 @@
 	}
 	img {
 			width: 120px;
-			margin-left: 130px;
+			/*margin-left: 130px;*/
 			margin-bottom: 20px;
 		}
 	p {
@@ -37,7 +37,7 @@
 
 .bg-overlay {
 	background: rgba(0,0,0,.5);
-	height: 100vh;
+	/*height: 100vh;*/
 	z-index: 0;
 	position: absolute;
 	top: 0px;
@@ -267,10 +267,12 @@ section {
 	.client-logo {
 		height: 160px;
 		background-color: #fff;
-		padding: 10px 20px;
+		/*margin: 10px 20px;*/
+		overflow: hidden;
 		margin-bottom: 20px;
 		box-shadow: 0px 0px 3px #aaa;
 		img {
+			padding: 10px 20px;
 			width: 100%;
 			position: relative;
 			top: 50%;
@@ -304,10 +306,10 @@ section {
 		}
 	}
 	.each-profile.umesh {
-		margin: 0px 10px 0px 50px;
+		/*margin: 0px 10px 0px 50px;*/
 	}
 	.each-profile.hamsa {
-		margin: 0px 50px 0px 10px;
+		/*margin: 0px 50px 0px 10px;*/
 	}
 	.info-blk {
 		padding: 20px;
@@ -373,7 +375,7 @@ section {
 		/*padding:0px 100px;*/
 		input {
 			width: calc(100% - 150px);
-			margin-right: 300px;
+			/*margin-right: 300px;*/
 			font-size: 20px;
 			height: 50px;
 			line-height: 50px;
@@ -426,4 +428,70 @@ footer {
     		}
     	}
     }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	/*.aboutus-blk {
+		.each-profile.umesh {
+			margin: 0px !important;
+		}
+		.each-profile.hamsa {
+			margin: 0px !important;
+		}
+	}*/
+	.bg-dark {
+		h1 {
+			font-size: 40px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+	footer {
+		.primary-links {
+			display: block;
+			li {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+		.copy {
+			text-align: center;
+			float: none;
+			margin-top: 30px;
+		}
+	}
+	.signup-blk {
+		.newsletter {
+			text-align: center;
+		}
+		.newsletter input {
+			width: 100%;
+		}
+		.newsletter button {
+			margin-top: 10px;
+			float: none;
+		}
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
 }
