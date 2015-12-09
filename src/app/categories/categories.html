@@ -3,7 +3,7 @@
         <div class="uk-container uk-container-center">
             <div class="brand-logo">
                 <a href="/#/">
-                    designz
+                    designz {{vm.route}}
                 </a>
             </div>
             <ul class="nav-links">
@@ -19,12 +19,13 @@
     <div class="uk-container uk-container-center">
         <!-- {{ route }} -->
         <div class="uk-grid">
-            <div class="uk-width-1-5">
-                <div class="sidebar">
+            <div class="uk-width-1-4">
+                <div class="sidebar" data-uk-sticky="{top:50}">
                     <!-- All categories -->
+                    <!-- {{products}} -->
                     <ul class="cat-links">
                         <li ng-repeat="category in products">
-                            <a href="">{{category.catname}} ({{category.items.length}})</a>
+                            <a href="/#/category/#{{category.cat_id}}" data-uk-smooth-scroll="">{{category.category}} <span class="uk-float-right">{{category.items.length}}</span></a>
                         </li>
                     </ul>
                 </div>
@@ -33,25 +34,38 @@
                 <div class="main-content">
                     
                     <!-- {{products | json}} -->
-                    <div class="each-category" ng-repeat="category in products" style="margin-bottom:35px;">
+                    <div class="each-category" ng-repeat="category in products" style="margin-bottom:35px;" id="{{category.cat_id}}">
                         <h2 style="margin-bottom:5px;">
-                            {{category.catname}}
+                            {{category.category}}
                         </h2>
                         <p>
-                            {{category.catdesc}}
+                            {{category.cat_desc}}
                         </p>
 
                         <div class="uk-grid">
                             <div class="uk-width-1-3" ng-repeat="item in category.items">
-                                <div class="each-product">
-                                    <div class="img-blk">
-                                        <img src="assets/images/site/clients/gkn.png" alt="">
+
+
+                                <a class="each-product uk-overlay uk-overlay-hover" >
+                                    <div class="img-blk uk-overlay-scale">
+                                        <img class=" "  ng-src="{{item.image}}" alt="">
+
                                     </div>
                                     <div class="det-blk">
                                         <h4>{{item.name}}</h4>
                                         <p></p>
                                     </div>
-                                </div>
+                                    <figcaption class="uk-overlay-panel uk-overlay-slide-bottom">
+                                        {{item.description}}
+                                        <div class="btn-bar">
+                                            <button class="uk-button uk-float-right uk-button-primary" ng-click="addToCart(item)">Add to cart</button>
+                                            <button href="#mymodal" data-uk-modal="" class="uk-button  uk-button-success">View more</button>
+
+                                        </div>
+                                    </figcaption>
+                                </a>
+
+
                             </div>
                         </div>
                     </div>
@@ -60,6 +74,10 @@
         </div>
     </div>
 </section>
+
+<div id="mymodal" class="uk-modal">
+    adifhbsadibfiuabf
+</div>
 
 <footer>
     <div class="uk-container uk-container-center">

@@ -12,7 +12,7 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .when('/category/:category', {
+      .when('/category/', {
         templateUrl: 'app/categories/categories.html',
         controller: 'CategoriesController',
         controllerAs: 'categories'

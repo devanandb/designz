@@ -53,12 +53,17 @@
 				display: block;
 				padding: 8px;
 				background-color: lighten(#e1e8f0,3%);
+				&:hover {
+					text-decoration:none;
+					background-color: lighten(#e1e8f0,6%);
+				}
 			}
 		}
 	}
 }
 
 .each-product {
+	display: block;
 	min-height: 300px;
 	background-color: #fff;
 	border: 1px solid #ddd;
@@ -69,7 +74,7 @@
 		margin: 20px auto;
 		width: 200px;
 		height: 200px;
-		border: 1px solid #dddddd;
+		/*border: 1px solid #dddddd;*/
 		/*background-color: #ddd;*/
 		img {
 			position: relative;
@@ -84,6 +89,22 @@
 		padding: 10px 15px;
 		h4 {
 			margin: 0px;
+		}
+	}
+	.uk-overlay-panel {
+		background:rgba(0,0,0,0.4);
+		/*top:90%;*/
+		/*bottom: 0px;
+		height: 30px;*/
+	}
+	figcaption {
+		/*text-transform: uppercase;*/
+		/*font-size: 20px;*/
+		.btn-bar {
+			position: absolute;
+			left: 20px;
+			right: 20px;
+			bottom: 20px;
 		}
 	}
 }
