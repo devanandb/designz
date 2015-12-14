@@ -33,12 +33,31 @@
 				line-height: 70px;
 				display: inline-block;
 				color: #eeeeee;
+
 				&:hover {
 					text-decoration:none;
 					background-color: darken(#4d4d4d, 10%);
 				}
 			}
 		}
+	}
+}
+.cart-link {
+	display: inline-block;
+	a {
+		padding:0px 20px;
+				line-height: 70px;
+				display: inline-block;
+				color: #eeeeee;
+				i {
+					display: inline-block;
+					margin-right: 5px;
+					font-size: 20px;
+				}
+				&:hover {
+					text-decoration:none;
+					background-color: darken(#4d4d4d, 10%);
+				}
 	}
 }
 .sidebar {

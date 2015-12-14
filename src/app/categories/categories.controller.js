@@ -15,9 +15,12 @@
     $http.get("http://skilledgeek.com/products/all")
     .then(function(response) {
         $scope.products = response.data;
+        
+        
 
         $scope.products = groupBy($scope.products, 'category', 'tid', 'cat_desc');
-        console.log($scope.products);
+        //console.log($scope.products);
+        
       });
 
 
@@ -36,318 +39,60 @@
         return newArr;
     }
 
-    // $scope.products = [
-    //       {
-    //           "catname": "Apparel",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/black.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, praesentium eveniet, ad sed similique quod!"
-    //               },
-    //               {
-    //                   "name": "Item Two",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/red.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores praesentium aliquam saepe, repudiandae fugiat. Eius."
-    //               },
-    //               {
-    //                   "name": "Item Three",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/green.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laborum ipsa illum. Fuga architecto, ab?"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/blue.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, minus delectus totam, suscipit quasi saepe."
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/orange.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consequuntur, laudantium. Iusto ex accusantium quidem!"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/melenge-grey.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestiae culpa distinctio ullam, voluptatibus voluptate!"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/purple.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi totam animi, accusamus, culpa dolores voluptates."
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/white.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nihil sequi exercitationem magni rem temporibus!"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/pink.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ex quisquam, tempora consequatur porro nobis!"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00",
-    //                   "imgpath": "products/apparel/polo/yellow.jpg",
-    //                   "code":"D32345",
-    //                   "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quis assumenda, possimus delectus, odio corporis!"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Acrylic Trophies",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Wooden Trophies",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Imported Trophies",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Stationery",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               },
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Desktop Accessories",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Home Accessories",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Home Appliances",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Flowers",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Cakes",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Confectionaries",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       },
-    //       {
-    //           "catname": "Others",
-    //           "catdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum consectetur facere ex totam, necessitatibus voluptatibus eaque id exercitationem repellendus modi consequatur fuga. Quia excepturi, consectetur itaque, nihil repellat consequatur.",
-    //           "items": [
-    //               {
-    //                   "name": "Item One",
-    //                   "price": "230.00"
-    //               }
-    //           ]
-    //       }
-          
-
-    //   ];
-
-
-    
     
     $scope.cart = [];
+    
 
-    $scope.addToCart = function(item) {
-      $scope.cart.push(item);
-      console.log($scope.cart);
+    $scope.addToCart = function (item)
+    {
+        $scope.total=0;
+        $scope.flag=0;
+
+        if ($scope.cart.length>0) {
+
+            for(var i=0; i<$scope.cart.length; i++)
+            {
+                console.log(item.nid, $scope.cart[i].nid);
+                if(item.nid==$scope.cart[i].nid)
+                    {
+                        console.log('Exists');
+                        $scope.flag=1;
+
+                    } 
+
+            }
+            if($scope.flag==0){
+                $scope.cart.push(item);
+            }
+
+        } else{
+            $scope.cart.push(item);
+        }
+
+        for(var i=0; i<$scope.cart.length; i++)
+        {
+
+            $scope.total=$scope.total+parseInt($scope.cart[i].price);
+
+        }
+        //console.log($scope.cart);
+        //console.log($scope.total);
+
+        
     }
+
+    $scope.deleteFromCart = function (index)
+    {
+        $scope.total=0;
+        if(index>=-1) { $scope.cart.splice(index,1); };
+        for(var i=0; i<$scope.cart.length; i++)
+        {
+            $scope.total=$scope.total+parseInt($scope.cart[i].price);
+
+        }
+    }
+    
+  
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
