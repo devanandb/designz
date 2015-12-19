@@ -45,9 +45,9 @@
 
     $scope.addToCart = function (item)
     {
-        $scope.total=0;
+        
         $scope.flag=0;
-
+        item.qty=1;
         if ($scope.cart.length>0) {
 
             for(var i=0; i<$scope.cart.length; i++)
@@ -69,27 +69,53 @@
             $scope.cart.push(item);
         }
 
-        for(var i=0; i<$scope.cart.length; i++)
-        {
-
-            $scope.total=$scope.total+parseInt($scope.cart[i].price);
-
-        }
-        //console.log($scope.cart);
+        $scope.getTotal();
+        console.log($scope.cart);
         //console.log($scope.total);
+
 
         
     }
 
     $scope.deleteFromCart = function (index)
     {
-        $scope.total=0;
+        
         if(index>=-1) { $scope.cart.splice(index,1); };
+        $scope.getTotal();
+    }
+
+    $scope.getTotal = function() {
+        $scope.total=0;
         for(var i=0; i<$scope.cart.length; i++)
         {
-            $scope.total=$scope.total+parseInt($scope.cart[i].price);
+            $scope.total=$scope.total+(parseInt($scope.cart[i].price)*parseInt($scope.cart[i].qty));
 
         }
+    }
+    
+
+    $scope.qtyInc = function(item) {
+        for(var i=0; i<$scope.cart.length; i++)
+            {
+                if(item.nid==$scope.cart[i].nid && item.qty>=1)
+                    {
+                        $scope.cart[i].qty+=1;
+                    } 
+            }
+
+            $scope.getTotal();
+    }
+
+    $scope.qtyDec = function(item) {
+        for(var i=0; i<$scope.cart.length; i++)
+            {
+                if(item.nid==$scope.cart[i].nid && item.qty>=1)
+                    {
+                        $scope.cart[i].qty-=1;
+                    } 
+            }
+
+            $scope.getTotal();
     }
     
   

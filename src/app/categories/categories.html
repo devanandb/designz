@@ -112,7 +112,11 @@
                     <td>{{$index + 1}}</td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
-                    <td><input type="number" min="1" max="50"></td>
+                    <td>
+                        <button class="uk-button" ng-click="qtyDec(item)"><i class="uk-icon-minus-circle"></i></button>
+                        <input type="text" ng-model="item.qty" ng-change="getTotal()">
+                        <button class="uk-button" ng-click="qtyInc(item)"><i class="uk-icon-plus-circle"></i></button>
+                    </td>
                     <td><a ng-click="deleteFromCart($index)" class="uk-close"></a></td>
                 </tr>
             </tbody>
